@@ -3,7 +3,7 @@ session_start();
 
 $host = "localhost";
 $user = "root";
-$password = "";
+$password = "root";
 $dbname = "authentication";
 $con = mysqli_connect($host, $user, $password, $dbname);
 

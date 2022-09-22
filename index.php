@@ -2,8 +2,15 @@
 include "config.php";
 
 if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
     if ($username != "" && $password != "") {
+        var_dump($username);
+        var_dump($password);
         $sql_query = "SELECT COUNT(*) AS userCount FROM users WHERE username='". $username . "'" . "AND password=" ."'" . $password . "'";
+        var_dump($sql_query);
         $result = mysqli_query($con, $sql_query);
         $row = mysqli_fetch_array($result);
 
